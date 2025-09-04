@@ -1,0 +1,577 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The US Residency</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="mobile.css" media="only screen and (max-width: 768px)">
+</head>
+<body>
+  <header>
+          <div class="logo-container">
+        <h1>US RESIDENCY</h1>
+      </div>
+      </div>
+    <nav>
+      <a href="#home">Home</a>
+      <a href="#rooms">Rooms</a>
+      <a href="#contact">Contact</a>
+      <a href="#map">Map</a>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+      <!-- Background Video -->
+      <div class="hero-video">
+        <video autoplay muted loop playsinline>
+          <source src="videos/4158229-hd_1920_1080_24fps.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="video-overlay"></div>
+      </div>
+      
+      <div class="hero-content">
+        <h1>Welcome to The US Residency</h1>
+        <p class="hero-subtitle">Experience luxury, comfort, and exceptional service in the heart of the city</p>
+        <div class="hero-buttons">
+          <a href="#booking" class="btn btn-primary">Book Now</a>
+          <a href="#rooms" class="btn btn-secondary">View Rooms</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Break -->
+    <div class="section-break"></div>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+      <h2>Gallery</h2>
+      <div class="slider-container">
+        <div class="slider" id="slider">
+          <div class="slide-group">
+            <img src="Gallery/IMG-20250828-WA0002.jpg" alt="Hotel Room Interior">
+            <img src="Gallery/IMG-20250828-WA0003.jpg" alt="Hotel Lobby">
+            <img src="Gallery/IMG-20250828-WA0004.jpg" alt="Hotel Exterior">
+            <img src="Gallery/IMG-20250828-WA0005.jpg" alt="Hotel Amenities">
+          </div>
+          <div class="slide-group">
+            <img src="Gallery/IMG-20250828-WA0008.jpg" alt="Hotel Restaurant">
+            <img src="Gallery/IMG-20250828-WA0009.jpg" alt="Hotel Pool Area">
+            <img src="Gallery/IMG-20250828-WA0010.jpg" alt="Hotel Garden">
+            <img src="Gallery/IMG-20250828-WA0011.jpg" alt="Hotel Conference Room">
+          </div>
+          <div class="slide-group">
+            <img src="Gallery/IMG-20250828-WA0013.jpg" alt="Hotel Suite">
+            <img src="Gallery/IMG-20250828-WA0014.jpg" alt="Hotel Spa">
+            <img src="Gallery/IMG-20250828-WA0016.jpg" alt="Hotel Bar">
+            <img src="Gallery/IMG-20250828-WA0017.jpg" alt="Hotel Gym">
+          </div>
+          <div class="slide-group">
+            <img src="Gallery/IMG-20250828-WA0018.jpg" alt="Hotel Reception">
+            <img src="Gallery/IMG-20250828-WA0019.jpg" alt="Hotel Balcony View">
+            <img src="Gallery/IMG-20250828-WA0020.jpg" alt="Hotel Dining Area">
+            <img src="Gallery/IMG-20250828-WA0021.jpg" alt="Hotel Lounge">
+          </div>
+          <div class="slide-group">
+            <img src="Gallery/IMG-20250828-WA0023.jpg" alt="Hotel Business Center">
+            <img src="Gallery/IMG-20250828-WA0024.jpg" alt="Hotel Parking">
+            <img src="Gallery/IMG-20250828-WA0025.jpg" alt="Hotel Elevator">
+            <img src="Gallery/IMG-20250828-WA0026.jpg" alt="Hotel Corridor">
+          </div>
+          <div class="slide-group">
+            <img src="Gallery/IMG-20250828-WA0027.jpg" alt="Hotel Room Service">
+            <img src="Gallery/IMG-20250828-WA0029.jpg" alt="Hotel Terrace">
+            <img src="Gallery/IMG-20250828-WA0030.jpg" alt="Hotel Library">
+            <img src="Gallery/IMG-20250828-WA0031.jpg" alt="Hotel Gift Shop">
+          </div>
+          <div class="slide-group">
+            <img src="Gallery/IMG-20250828-WA0032.jpg" alt="Hotel Laundry">
+            <img src="Gallery/IMG-20250828-WA0033.jpg" alt="Hotel Security">
+            <img src="Gallery/IMG-20250828-WA0034.jpg" alt="Hotel Maintenance">
+            <img src="Gallery/IMG-20250828-WA0035.jpg" alt="Hotel Housekeeping">
+          </div>
+          <div class="slide-group">
+            <img src="Gallery/IMG-20250828-WA0036.jpg" alt="Hotel Concierge">
+            <img src="Gallery/IMG-20250828-WA0037.jpg" alt="Hotel Valet">
+            <img src="Gallery/IMG-20250828-WA0038.jpg" alt="Hotel Bell Service">
+            <img src="Gallery/IMG-20250828-WA0039.jpg" alt="Hotel Front Desk">
+          </div>
+          <div class="slide-group">
+            <img src="Gallery/IMG-20250828-WA0040.jpg" alt="Hotel Guest Services">
+            <img src="Gallery/IMG-20250828-WA0041.jpg" alt="Hotel Event Space">
+            <img src="Gallery/IMG-20250828-WA0042.jpg" alt="Hotel Wedding Venue">
+            <img src="Gallery/IMG-20250828-WA0043.jpg" alt="Hotel Meeting Room">
+          </div>
+          <div class="slide-group">
+            <img src="Gallery/IMG-20250828-WA0044.jpg" alt="Hotel Banquet Hall">
+            <img src="Gallery/IMG-20250828-WA0045.jpg" alt="Hotel Outdoor Space">
+            <img src="Gallery/IMG-20250828-WA0046.jpg" alt="Hotel Rooftop">
+            <img src="Gallery/IMG-20250828-WA0047.jpg" alt="Hotel Panoramic View">
+          </div>
+        </div>
+        
+        <!-- Navigation arrows -->
+        <button class="prev-btn" onclick="changeSlide(-1)">&#10094;</button>
+        <button class="next-btn" onclick="changeSlide(1)">&#10095;</button>
+        
+        <!-- Dots indicator -->
+        <div class="dots-container">
+          <span class="dot active" onclick="currentSlide(1)"></span>
+          <span class="dot" onclick="currentSlide(2)"></span>
+          <span class="dot" onclick="currentSlide(3)"></span>
+          <span class="dot" onclick="currentSlide(4)"></span>
+          <span class="dot" onclick="currentSlide(5)"></span>
+          <span class="dot" onclick="currentSlide(6)"></span>
+          <span class="dot" onclick="currentSlide(7)"></span>
+          <span class="dot" onclick="currentSlide(8)"></span>
+          <span class="dot" onclick="currentSlide(9)"></span>
+          <span class="dot" onclick="currentSlide(10)"></span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Break -->
+    <div class="section-break"></div>
+
+    <!-- About Section -->
+    <section class="about">
+      <div class="about-content">
+        <h2>About The US Residency</h2>
+        <p>Located in the heart of Varanasi, The US Residency is a comfortable 3-star hotel offering clean accommodation with essential amenities. Our prime location provides easy access to the sacred ghats and ancient temples, making it perfect for spiritual seekers and tourists exploring the holy city.</p>
+        <div class="features">
+          <div class="feature">
+            <h3>📍 Prime Location</h3>
+            <p>Strategically located closest to the ghats and temples in Varanasi, offering easy access to spiritual sites.</p>
+          </div>
+          <div class="feature">
+            <h3>⭐ 3-Star Comfort</h3>
+            <p>Clean, comfortable rooms with essential amenities for a pleasant stay in the holy city.</p>
+          </div>
+          <div class="feature">
+            <h3>🍳 Daily Breakfast</h3>
+            <p>Complimentary breakfast included with your stay to start your day right.</p>
+          </div>
+          <div class="feature">
+            <h3>🧹 Daily Cleaning</h3>
+            <p>Regular housekeeping services to ensure your room stays clean and comfortable throughout your stay.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Break -->
+    <div class="section-break"></div>
+
+    <!-- Amenities Section -->
+    <section class="amenities">
+      <h2>Hotel Amenities</h2>
+      <div class="amenities-grid">
+        <div class="amenity">
+          <h3>🛏️ Private Bedroom</h3>
+          <p>Each room features a private, comfortable bedroom for your privacy</p>
+        </div>
+        <div class="amenity">
+          <h3>📺 TV Screen</h3>
+          <p>Entertainment with TV screens in all rooms for your comfort</p>
+        </div>
+        <div class="amenity">
+          <h3>❄️ Air Conditioning</h3>
+          <p>Climate-controlled rooms with AC for a comfortable stay</p>
+        </div>
+        <div class="amenity">
+          <h3>🍳 Complimentary Breakfast</h3>
+          <p>Daily breakfast included with your stay to start your day right</p>
+        </div>
+        <div class="amenity">
+          <h3>🧹 Daily Housekeeping</h3>
+          <p>Regular cleaning services to maintain room cleanliness</p>
+        </div>
+        <div class="amenity">
+          <h3>🚗 Parking</h3>
+          <p>Convenient parking facilities for guests with vehicles</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Break -->
+    <div class="section-break"></div>
+
+    <!-- Room Types Preview -->
+    <section class="room-preview" id="rooms">
+      <h2>Our Rooms</h2>
+      <div class="rooms-grid">
+        <div class="room-card">
+          <h3>Standard Room (2 Beds)</h3>
+          <p>Comfortable rooms with two beds, perfect for friends or small families. We have 4 standard rooms available.</p>
+          <ul>
+            <li>Two comfortable beds</li>
+            <li>Private bedroom</li>
+            <li>TV screen</li>
+            <li>AC</li>
+          </ul>
+          <div class="price">₹1,000 per night</div>
+          <div class="availability">4 rooms available</div>
+          <a href="#rooms" class="btn">Book Now</a>
+        </div>
+        <div class="room-card">
+          <h3>Family Room (4 People)</h3>
+          <p>Spacious family accommodation perfect for groups of four people.</p>
+          <ul>
+            <li>Four comfortable beds</li>
+            <li>Private bedroom</li>
+            <li>TV screen</li>
+            <li>AC</li>
+            <li>Terrace access</li>
+            <li>Flash balcony</li>
+          </ul>
+          <div class="price">₹3,000 per night</div>
+          <a href="#rooms" class="btn">Book Now</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Break -->
+    <div class="section-break"></div>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials">
+      <h2>What Our Guests Say</h2>
+      <div class="testimonials-grid">
+        <div class="testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Exceptional service and beautiful rooms. The staff went above and beyond to make our stay memorable."</p>
+          <div class="guest-info">
+            <strong>Abhishek Gupta</strong>
+            <span>Business Traveler</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"Perfect location, amazing amenities, and the most comfortable beds. Highly recommended!"</p>
+          <div class="guest-info">
+            <strong>Michael Chen</strong>
+            <span>Family Vacation</span>
+          </div>
+        </div>
+        <div class="testimonial">
+          <div class="stars">⭐⭐⭐⭐⭐</div>
+          <p>"The presidential suite was absolutely stunning. Worth every penny for the luxury experience."</p>
+          <div class="guest-info">
+            <strong>Ridhhi Singh</strong>
+            <span>Anniversary Celebration</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Break -->
+    <div class="section-break"></div>
+
+    <!-- Location & Contact -->
+    <section class="location-contact" id="contact">
+      <div class="location-info">
+        <h2>Visit Us</h2>
+        <div class="contact-details">
+          <div class="contact-item">
+            <h3>📍 Address</h3>
+            <p>N1/12 L-8 GANGOTRI VIHAR COLONY<br>NEAR RAVIDAS PARK<br>Varanasi, Uttar Pradesh</p>
+          </div>
+          <div class="contact-item">
+            <h3>📞 Phone</h3>
+            <p>9918646333<br>9415597513 (WhatsApp)</p>
+          </div>
+          <div class="contact-item">
+            <h3>✉️ Email</h3>
+            <p>theusresidency@gmail.com</p>
+          </div>
+          <div class="contact-item">
+            <h3>🕒 Check-in/out</h3>
+            <p>Check-in: 11:00 AM<br>Check-out: 11:00 AM</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Section Break -->
+    <div class="section-break"></div>
+
+    <!-- Map View Section -->
+    <section class="map-view" id="map">
+      <h2>Find Us</h2>
+      <div class="map-container">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3608.1234567890123!2d82.98765432109876!3d25.12345678901234!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMjXCsDA3JzM0LjQiTiA4MsKwNTknMTUuNiJF!5e0!3m2!1sen!2sin!4v1234567890123!5m2!1sen!2sin"
+          width="100%" 
+          height="450" 
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy" 
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+        <div class="map-overlay">
+          <div class="location-pin">
+            <h3>📍 The US Residency</h3>
+            <p>N1/12 L-8 GANGOTRI VIHAR COLONY<br>NEAR RAVIDAS PARK<br>Varanasi, Uttar Pradesh</p>
+            <a href="https://maps.app.goo.gl/WUqM4r8nxVoNni8C8" target="_blank" class="btn btn-map">Open in Google Maps</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- Booking CTA Section -->
+    <section class="booking-cta" id="booking">
+      <div class="cta-content">
+        <h2>Ready to Experience Luxury?</h2>
+        <p>Book your stay now and enjoy our special welcome package</p>
+        <div class="cta-buttons">
+          <a href="#rooms" class="btn btn-primary">Book Now</a>
+          <a href="#contact" class="btn btn-secondary">Contact Us</a>
+        </div>
+        <div class="special-offers">
+          <h3>Special Offers</h3>
+          <ul>
+            <li>🎉 20% off for stays over 3 nights</li>
+            <li>💼 Corporate rates available</li>
+            <li>🎂 Complimentary birthday package</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Lightbox -->
+  <div id="lightbox" class="lightbox">
+    <span class="close">&times;</span>
+    <div class="lightbox-content">
+      <img id="lightbox-img" src="" alt="">
+    </div>
+  </div>
+
+  <script>
+    // Multi-Image Slider functionality
+    let currentSlideIndex = 0;
+    const slider = document.getElementById('slider');
+    const slideGroups = document.querySelectorAll('.slide-group');
+    const dots = document.querySelectorAll('.dot');
+    const totalSlides = slideGroups.length;
+    let autoSlideInterval;
+
+    // Initialize slider
+    function initSlider() {
+      showSlide(0);
+      startAutoSlide();
+    }
+
+    // Show specific slide
+    function showSlide(index) {
+      // Update dots
+      dots.forEach(dot => dot.classList.remove('active'));
+      
+      // Handle slide index bounds
+      if (index >= totalSlides) {
+        currentSlideIndex = 0;
+      } else if (index < 0) {
+        currentSlideIndex = totalSlides - 1;
+      } else {
+        currentSlideIndex = index;
+      }
+      
+      // Move slider to show current slide group
+      const translateX = -currentSlideIndex * 100;
+      slider.style.transform = `translateX(${translateX}%)`;
+      
+      // Update active dot
+      dots[currentSlideIndex].classList.add('active');
+    }
+
+    // Change slide by direction
+    function changeSlide(direction) {
+      showSlide(currentSlideIndex + direction);
+      resetAutoSlide();
+    }
+
+    // Go to specific slide
+    function currentSlide(index) {
+      showSlide(index - 1);
+      resetAutoSlide();
+    }
+
+    // Auto slide functionality
+    function startAutoSlide() {
+      autoSlideInterval = setInterval(() => {
+        showSlide(currentSlideIndex + 1);
+      }, 4000); // Change slide every 4 seconds
+    }
+
+    function resetAutoSlide() {
+      clearInterval(autoSlideInterval);
+      startAutoSlide();
+    }
+
+    // Pause auto slide on hover
+    const sliderContainer = document.querySelector('.slider-container');
+    sliderContainer.addEventListener('mouseenter', () => {
+      clearInterval(autoSlideInterval);
+    });
+
+    sliderContainer.addEventListener('mouseleave', () => {
+      startAutoSlide();
+    });
+
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const closeBtn = document.querySelector('.close');
+    const allImages = document.querySelectorAll('.slide-group img');
+
+    // Open lightbox when clicking on any image
+    allImages.forEach(img => {
+      img.addEventListener('click', () => {
+        lightbox.style.display = 'block';
+        lightboxImg.src = img.src;
+        lightboxImg.alt = img.alt;
+        document.body.style.overflow = 'hidden';
+        clearInterval(autoSlideInterval); // Pause auto slide when lightbox is open
+      });
+    });
+
+    // Close lightbox
+    function closeLightbox() {
+      lightbox.style.display = 'none';
+      document.body.style.overflow = 'auto';
+      startAutoSlide(); // Resume auto slide when lightbox is closed
+    }
+
+    closeBtn.addEventListener('click', closeLightbox);
+
+    // Close lightbox when clicking outside the image
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) {
+        closeLightbox();
+      }
+    });
+
+    // Close lightbox with Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && lightbox.style.display === 'block') {
+        closeLightbox();
+      }
+    });
+
+    // Keyboard navigation for slider
+    document.addEventListener('keydown', (e) => {
+      if (lightbox.style.display !== 'block') {
+        if (e.key === 'ArrowLeft') {
+          changeSlide(-1);
+        } else if (e.key === 'ArrowRight') {
+          changeSlide(1);
+        }
+      }
+    });
+
+    // Initialize slider when page loads
+    document.addEventListener('DOMContentLoaded', initSlider);
+
+    // Video background optimization
+    document.addEventListener('DOMContentLoaded', function() {
+      const video = document.querySelector('.hero-video video');
+      
+      if (video) {
+        // Preload video for better performance
+        video.preload = 'metadata';
+        
+        // Handle video loading
+        video.addEventListener('loadeddata', function() {
+          console.log('Background video loaded successfully');
+        });
+        
+        // Handle video errors
+        video.addEventListener('error', function() {
+          console.log('Video failed to load, using fallback background');
+          // The CSS fallback background will be used automatically
+        });
+        
+        // Pause video on mobile to save bandwidth (optional)
+        if (window.innerWidth <= 768) {
+          video.pause();
+          // You can uncomment the line below if you want to play on mobile too
+          // video.play();
+        }
+      }
+    });
+
+    // Handle window resize for mobile optimization
+    window.addEventListener('resize', function() {
+      const video = document.querySelector('.hero-video video');
+      if (video && window.innerWidth <= 768) {
+        // Pause video on mobile to save bandwidth
+        video.pause();
+      } else if (video && window.innerWidth > 768) {
+        // Play video on desktop
+        video.play();
+      }
+    });
+
+    // Enhanced navigation with smooth scrolling and active states
+    document.addEventListener('DOMContentLoaded', function() {
+      const navLinks = document.querySelectorAll('nav a');
+      const sections = document.querySelectorAll('section[id]');
+      
+      // Smooth scrolling for navigation links
+      navLinks.forEach(link => {
+        link.addEventListener('click', function(e) {
+          e.preventDefault();
+          
+          const targetId = this.getAttribute('href').substring(1);
+          const targetSection = document.getElementById(targetId);
+          
+          if (targetSection) {
+            // Remove active class from all links
+            navLinks.forEach(link => link.classList.remove('active'));
+            
+            // Add active class to clicked link
+            this.classList.add('active');
+            
+            // Smooth scroll to target section
+            targetSection.scrollIntoView({
+              behavior: 'smooth',
+              block: 'start'
+            });
+            
+            // Remove active class after scrolling animation
+            setTimeout(() => {
+              this.classList.remove('active');
+            }, 1000);
+          }
+        });
+      });
+      
+      // Update active navigation based on scroll position
+      window.addEventListener('scroll', function() {
+        let current = '';
+        
+        sections.forEach(section => {
+          const sectionTop = section.offsetTop;
+          const sectionHeight = section.clientHeight;
+          
+          if (window.pageYOffset >= (sectionTop - 200)) {
+            current = section.getAttribute('id');
+          }
+        });
+        
+        navLinks.forEach(link => {
+          link.classList.remove('active');
+          if (link.getAttribute('href') === `#${current}`) {
+            link.classList.add('active');
+          }
+        });
+      });
+    });
+  </script>
+</body>
+</html>
