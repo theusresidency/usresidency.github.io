@@ -9,6 +9,9 @@
 /* Mobile CSS - Only loads on screens ≤768px */
 @media only screen and (max-width: 768px) {
 
+/* Floating Navigation Menu and Back to Top Button styles removed */
+
+
 /* Import base fonts for mobile */
 @import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Roboto:wght@300;400;500&display=swap');
 
@@ -60,11 +63,10 @@ header {
   top: 0 !important;
   z-index: 100 !important;
   display: flex !important;
-  flex-direction: column !important;
+  flex-direction: row !important;
   align-items: center !important;
-  justify-content: center !important;
+  justify-content: space-between !important;
   min-height: 60px !important;
-  gap: 0.8rem !important;
 }
 
 header h1 {
@@ -78,34 +80,116 @@ header h1 {
 
 /* Mobile Navigation */
 nav {
+  display: none !important;
+  flex-direction: column !important;
+  position: absolute !important;
+  top: 60px !important;
+  left: 0 !important;
+  width: 100% !important;
+  background: linear-gradient(135deg, #0a1a2a 0%, #1a2a4a 100%) !important;
+  padding: 0.6rem !important;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3) !important;
+  z-index: 99 !important;
+  border-top: 1px solid rgba(255, 215, 0, 0.1) !important;
+  max-height: 80vh !important;
+  overflow-y: auto !important;
+}
+
+nav.show {
   display: flex !important;
-  gap: 0.5rem !important;
-  flex-wrap: wrap !important;
-  justify-content: center !important;
+  animation: slideDown 0.3s ease forwards !important;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0 !important;
+    transform: translateY(-10px) !important;
+  }
+  to {
+    opacity: 1 !important;
+    transform: translateY(0) !important;
+  }
 }
 
 nav a {
   color: #ffd700 !important;
   text-decoration: none !important;
-  font-weight: 600 !important;
-  font-size: 1.1rem !important;
-  padding: 0.7rem 1rem !important;
-  border-radius: 6px !important;
+  font-weight: 500 !important;
+  font-size: 0.95rem !important;
+  padding: 0.5rem 0.8rem !important;
+  border-radius: 4px !important;
   transition: all 0.3s ease !important;
   position: relative !important;
-  background: rgba(255, 215, 0, 0.1) !important;
-  border: 1px solid rgba(255, 215, 0, 0.2) !important;
-  display: inline-block !important;
-  margin: 0.2rem !important;
-  min-width: 70px !important;
+  background: rgba(255, 215, 0, 0.08) !important;
+  border: 1px solid rgba(255, 215, 0, 0.15) !important;
+  display: block !important;
+  margin: 0.3rem 0 !important;
   text-align: center !important;
+  letter-spacing: 0.5px !important;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1) !important;
 }
 
 nav a:hover, nav a:active {
   color: #fffacd !important;
+  background: rgba(255, 215, 0, 0.15) !important;
+  border-color: rgba(255, 215, 0, 0.3) !important;
+  transform: translateY(-1px) !important;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15) !important;
+}
+
+/* Toggle Button - Polished Look */
+.nav-toggle {
+  display: flex !important;
+  flex-direction: column !important;
+  justify-content: center !important;
+  align-items: center !important;
+  background: rgba(255, 215, 0, 0.1) !important;
+  border: 1px solid rgba(255, 215, 0, 0.2) !important;
+  border-radius: 6px !important;
+  color: #ffd700 !important;
+  cursor: pointer !important;
+  padding: 0.4rem 0.5rem !important;
+  z-index: 101 !important;
+  position: relative !important;
+  width: 40px !important;
+  height: 40px !important;
+  transition: all 0.3s ease !important;
+}
+
+.nav-toggle:hover {
   background: rgba(255, 215, 0, 0.2) !important;
   border-color: rgba(255, 215, 0, 0.4) !important;
-  transform: scale(1.05) !important;
+}
+
+.nav-toggle .bar {
+  display: block !important;
+  width: 22px !important;
+  height: 2px !important;
+  margin: 3px auto !important;
+  background-color: #ffd700 !important;
+  transition: all 0.3s ease !important;
+  border-radius: 4px !important;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.2) !important;
+}
+
+.nav-toggle.active {
+  background: rgba(255, 215, 0, 0.2) !important;
+  border-color: rgba(255, 215, 0, 0.4) !important;
+}
+
+.nav-toggle.active .bar:nth-child(1) {
+  transform: translateY(7px) rotate(45deg) !important;
+  width: 20px !important;
+}
+
+.nav-toggle.active .bar:nth-child(2) {
+  opacity: 0 !important;
+  transform: translateX(-5px) !important;
+}
+
+.nav-toggle.active .bar:nth-child(3) {
+  transform: translateY(-7px) rotate(-45deg) !important;
+  width: 20px !important;
 }
 
 /* Mobile Main Content */
@@ -158,6 +242,19 @@ h2 {
   width: 100% !important;
   height: 100% !important;
   object-fit: cover !important;
+}
+
+.video-play-button {
+  width: 60px !important;
+  height: 60px !important;
+  background-color: rgba(212, 165, 116, 0.8) !important;
+  z-index: 10 !important;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6) !important;
+}
+
+.video-play-button svg {
+  width: 40px !important;
+  height: 40px !important;
 }
 
 .video-overlay {
@@ -232,6 +329,25 @@ h2 {
   height: 2px !important;
   background: linear-gradient(90deg, transparent, rgba(212, 165, 116, 0.5), transparent) !important;
   margin: 2rem 0 !important;
+  position: relative !important;
+}
+
+.section-break::after {
+  content: "" !important;
+  position: absolute !important;
+  top: -10px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  width: 30px !important;
+  height: 20px !important;
+  background: rgba(45, 35, 65, 0.5) !important;
+  border-radius: 50% !important;
+  border: 1px solid rgba(212, 165, 116, 0.3) !important;
+}
+
+/* Section Navigation */
+.section-nav {
+  display: none !important;
 }
 
 /* Mobile Gallery Section */
@@ -339,8 +455,7 @@ h2 {
 .about p {
   font-size: 1rem !important;
   line-height: 1.7 !important;
-  margin-bottom: 2rem !important;
-  color: #c4b4a0 !important;
+
 }
 
 .features {
@@ -575,26 +690,7 @@ h2 {
   transition: all 0.3s ease !important;
 }
 
-/* Mobile Booking CTA Section */
-.booking-cta {
-  padding: 3rem 1rem !important;
-  background: rgba(45, 35, 65, 0.2) !important;
-  backdrop-filter: blur(30px) !important;
-}
 
-.cta-content {
-  max-width: 100% !important;
-  margin: 0 auto !important;
-  text-align: center !important;
-}
-
-.cta-content h2 {
-  font-size: 1.8rem !important;
-  margin-bottom: 1rem !important;
-}
-
-.cta-content p {
-  font-size: 1rem !important;
   margin-bottom: 2rem !important;
   color: #c4b4a0 !important;
 }
@@ -731,11 +827,7 @@ h2 {
 }
 
 .room-card {
-  background: rgba(70, 55, 90, 0.25) !important;
-  backdrop-filter: blur(25px) !important;
-  padding: 1.5rem !important;
-  border-radius: 12px !important;
-  border: 1px solid rgba(150, 120, 180, 0.2) !important;
+
 }
 
 .room-card h3 {
@@ -960,21 +1052,7 @@ h2 {
   margin-bottom: 1rem !important;
 }
 
-.cta-content p {
-  color: #c4b4a0 !important;
-  margin-bottom: 2rem !important;
-  font-size: 1rem !important;
-}
 
-.cta-buttons {
-  display: flex !important;
-  flex-direction: column !important;
-  gap: 1rem !important;
-  align-items: center !important;
-  margin-bottom: 2rem !important;
-}
-
-.special-offers {
   background: rgba(70, 55, 90, 0.25) !important;
   backdrop-filter: blur(25px) !important;
   padding: 1.5rem !important;
@@ -994,15 +1072,7 @@ h2 {
   margin: 0 !important;
 }
 
-.special-offers li {
-  color: #c4b4a0 !important;
-  padding: 0.5rem 0 !important;
-  border-bottom: 1px solid rgba(150, 120, 180, 0.2) !important;
-}
 
-.special-offers li:last-child {
-  border-bottom: none !important;
-}
 
 /* Mobile Lightbox */
 .lightbox {
